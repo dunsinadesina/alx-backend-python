@@ -1,17 +1,18 @@
 #!/usr/bin/env python3
-"""function that multiplies a float by multiplier and return a function"""
+"""Contains a function that multiplies a float by multiplier"""
 from typing import Callable
 
+
 def make_multiplier(multiplier: float) -> Callable[[float], float]:
-    """multiplies a float by a multiplier
+    """Multiplies a float by multiplier
     Args:
-        multiplier(float): multiplier
+        multiplier (float): The multiplier
     Returns:
-        function that multiplies a float by multiplier
+        A function that multiplies a float by multiplier
     """
 
     def multiplier_func(number: float) -> float:
-        """multiplies a float by a multiplier"""
+        """Multiplies a float by multiplier"""
         return multiplier * number
 
     return multiplier_func
